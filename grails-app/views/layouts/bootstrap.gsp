@@ -16,7 +16,7 @@
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 
-		<r:require modules="scaffolding"/>
+		<asset:stylesheet src="application.css"/>
 
 		<!-- Le fav and touch icons -->
 		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
@@ -24,45 +24,45 @@
 		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
 
 		<g:layoutHead/>
-		<r:layoutResources/>
 	</head>
 
 	<body>
-		<nav class="navbar navbar-fixed-top">
-			<div class="navbar-inner">
-				<div class="container-fluid">
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      		<div class="container">
+					<div class="navbar-header">
+      					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        					<span class="sr-only">Toggle navigation</span>
+        					<span class="icon-bar"></span>
+        					<span class="icon-bar"></span>
+        					<span class="icon-bar"></span>
+      					</button>
+      					<a class="navbar-brand" href="${createLink(uri: '/')}">Grails</a>
+    				</div>
 					
-					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</a>
-					
-					<a class="brand" href="${createLink(uri: '/')}">Grails Twitter Bootstrap</a>
 
-					<div class="nav-collapse">
-						<ul class="nav">							
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">							
 							<li<%= request.forwardURI == "${createLink(uri: '/')}" ? ' class="active"' : '' %>><a href="${createLink(uri: '/')}">Home</a></li>
-							<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-								<li<%= c.logicalPropertyName == controllerName ? ' class="active"' : '' %>><g:link controller="${c.logicalPropertyName}">${c.naturalName}</g:link></li>
-							</g:each>
+							
+							<li class="dropdown">
+          						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Controllers <span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu">
+									<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
+										<li<%= c.logicalPropertyName == controllerName ? ' class="active"' : '' %>><g:link controller="${c.logicalPropertyName}">${c.naturalName}</g:link></li>
+									</g:each>
+								</ul>
+							</li>
 						</ul>
 					</div>
 				</div>
-			</div>
-		</nav>
-
-		<div class="container-fluid">
-			<g:layoutBody/>
-
-			<hr>
-
-			<footer>
-				<p>&copy; Company 2013</p>
-			</footer>
 		</div>
 
-		<r:layoutResources/>
+		<div class="container">
+			<div class="starter-template">
+				<g:layoutBody/>
+			</div>
+		</div>
 
+		<asset:javascript src="application.js"/>
 	</body>
 </html>
