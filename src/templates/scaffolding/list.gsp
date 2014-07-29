@@ -5,26 +5,11 @@
 <html>
 <head>
 <meta name="layout" content="bootstrap">
-<g:set var="entityName"
-	value="\${message(code: '${domainClass.propertyName}.label', default: '${className}')}" />
+<g:set var="entityName" value="\${message(code: '${domainClass.propertyName}.label', default: '${className}')}" />
 <title><g:message code="default.list.label" args="[entityName]" /></title>
 </head>
 <body>
-	
-	<nav class="navbar navbar-default" role="navigation">
-  		<div class="container-fluid">
-  			<div class="navbar-header">
-  				<span class="navbar-brand">\${entityName}</span>
-			</div>
-			<div class="collapse navbar-collapse" id="bs-model-navbar-actions">
-      			<ul class="nav navbar-nav">
-					<li class="active"><g:link class="list" action="list"><span class="glyphicon glyphicon-list-alt"></span><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-					<li><g:link class="create" action="create"><span class="glyphicon glyphicon-plus"></span><g:message code="default.create.label" args="[entityName]" /></g:link></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-
+	<g:render template="nav" />
 
 	<div class="page-header">
 		<h1>

@@ -6,7 +6,7 @@ class AlertsTagLib {
 
 	static namespace = "bootstrap"
 
-	static List<String> validTypes = [ "info", "success", "warning", "danger" ]
+	static List<String> validTypes = [ "info", "success", "warning", "danger", "error" ]
 	
 	/**
 	 * Create a Bootstrap alert
@@ -18,10 +18,11 @@ class AlertsTagLib {
 		def type = attrs.type ?: "info";
 		def dismissable = Boolean.valueOf(attrs.dismissable ?: true);
 		
+		type = (type.equals("error")) ?: "danger"; // Little helper foo
+		
 		if (!validTypes.contains(type)) {
 			throw new GrailsTagException("Invalid alert type")
 		}
-		
 		
 		out << '<div class="alert alert-' << type << '">'
 		if (dismissable) {
