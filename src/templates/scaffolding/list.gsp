@@ -9,7 +9,6 @@
 <title><g:message code="default.list.label" args="[entityName]" /></title>
 </head>
 <body>
-	<g:render template="nav" />
 
 	<div class="page-header">
 		<h1>

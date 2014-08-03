@@ -3,10 +3,6 @@
 This is an experimental Grails project using Twitter Bootstrap for scaffolded views.  It has been updated to 
 work with Grails 2.4.2 and the lastest version of the twitter bootstrap plugin.
 
-## Demo
-
-This demo seems dead
-[Check out the demo](http://grails-twitter-bootstrap.cloudfoundry.com) on Cloud Foundry.
 
 ## Installation
 
@@ -25,8 +21,14 @@ You can either use this project as a template or to add to an existing Grails ap
    
 Using this project as a template is the easiest way to get running quickly.
    
-## TODO
+## Credits
 
-The scaffolding still needs to be updated to Bootstrap 3.x.
+The [Original version](https://github.com/robfletcher/twitter-bootstrap-scaffolding) needed some updates, so I made them.
 
+Some common components borrowed from [KickstartWithBootstrap](https://github.com/joergrech/KickstartWithBootstrap).  
 
+## Future
+
+I'd like to break this out as a plugin for people to quick start things, sort of like [this plugin](http://grails.org/plugin/kickstart-with-bootstrap) but up to date.
+
+In maybe a year or so, when Java 1.8 is more mainstream and Grails supports it, remove the Joda dependency and use the new 1.8 date libraries.
