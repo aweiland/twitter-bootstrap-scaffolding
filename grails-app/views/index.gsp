@@ -65,7 +65,9 @@ grails-app/views/_fields/default/_field.gsp</pre>
 					href="https://github.com/robfletcher/twitter-bootstrap-scaffolding">GitHub</a>.
 			</p>
 
-			<bootstrap:alert class="alert-warning alert-dismissible">This is an alert</bootstrap:alert>
+			<bootstrap:alert type="warning">This is an alert</bootstrap:alert>
+			
+			<bootstrap:datePicker name="something" />			
 
 		</div>
 		<div class="col-md-4">

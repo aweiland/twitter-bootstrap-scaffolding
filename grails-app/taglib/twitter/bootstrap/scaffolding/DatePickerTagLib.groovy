@@ -10,6 +10,11 @@ import org.springframework.web.servlet.support.RequestContextUtils as RCU
 class DatePickerTagLib {
     //static encodeAsForTags = [tagName: [taglib:'html'], otherTagName: [taglib:'none']]
 	
+	static namespace = "bootstrap"
+	
+	def requestDataValueProcessor
+	def messageSource
+	
 	/**
 	 * A simple date picker that renders a date as selects.<br/>
 	 * This is just an initial hack - can be widely improved!
@@ -142,19 +147,6 @@ class DatePickerTagLib {
 		}
 		String formattedDate = g.formatDate(format: dateFormat.replace('m', 'M'), date: c?.getTime())
 		out.println "	<input id=\"${id}\" name=\"${name}\" class=\"datepicker ${inputClasses}\" size=\"16\" type=\"text\" value=\"${formattedDate}\" data-date-format=\"${dateFormat}\"/>"
-	}
-
-	/**
-	 * A fix for Grails's datePicker to use class styling
-	 * based on http://grails.1312388.n4.nabble.com/How-to-set-css-classes-for-lt-g-datePicker-gt-td4242497.html
-	 */
-	def customDatePicker = {attrs, body ->
-		def selectClass	= attrs['class']
-		def unstyled	= g.datePicker(attrs, body)
-		def styled		= unstyled.replaceAll('name="\\S+_(day|month|year|hour|minute)"') { match, index ->
-			"${match} class=\"${selectClass}\""
-		}
-		out << styled
 	}
 
 
