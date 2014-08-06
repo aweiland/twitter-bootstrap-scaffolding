@@ -11,6 +11,13 @@
 
 <g:paginate total="120" />
 
+<h1>Date Picker</h1>
+
+<bootstrap:datePicker name="testme"/>
+
+<h1>Field</h1>
+<g:textField name="test"/>
+
 </body>
 
 </html>

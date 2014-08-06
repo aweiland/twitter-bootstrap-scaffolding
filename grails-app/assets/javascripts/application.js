@@ -13,6 +13,9 @@
 
 if (typeof jQuery !== 'undefined') {
 	(function($) {
+		$('.datepicker').datepicker();
+		
+		
 		$('#spinner').ajaxStart(function() {
 			$(this).fadeIn();
 		}).ajaxStop(function() {
