@@ -13,9 +13,7 @@
 				<h1>Welcome to Grails</h1>
 
 				<p>
-					Grails scaffolding with a <a
-						href="http://twitter.github.com/bootstrap" rel="external"><em>Twitter
-							Bootstrap</em></a> look &amp; feel?
+					Grails scaffolding with a <a href="http://twitter.github.com/bootstrap" rel="external"><em>Twitter Bootstrap</em></a> look &amp; feel?
 				</p>
 
 				<p>
@@ -102,5 +100,6 @@ grails-app/views/_fields/default/_field.gsp</pre>
 				</div>
 			</div>
 		</div>
+	</div>
 </body>
 </html>

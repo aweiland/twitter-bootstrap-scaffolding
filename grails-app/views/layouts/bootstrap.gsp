@@ -27,10 +27,10 @@
 	</head>
 
 	<body>
-		<g:render template="/_menu/navbar" />
+		<g:render template="/_common/nav/navbar" />
 
 		<div class="container">
-			<g:render template="/_menu/crudbar" />
+			<g:render template="/_common/nav/crudbar" />
 			<div class="starter-template">
 				<g:layoutBody/>
 			</div>
