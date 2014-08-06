@@ -18,6 +18,13 @@
 <h1>Field</h1>
 <g:textField name="test"/>
 
+<h1>Glyphicons</h1>
+Tag lib test here:
+<p>
+<bootstrap:glyphicon icon="plus"/>
+<bootstrap:glyphicon icon="send"/>
+</p>
+
 </body>
 
 </html>
