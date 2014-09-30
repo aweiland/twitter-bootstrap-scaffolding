@@ -25,6 +25,11 @@ Tag lib test here:
 <bootstrap:glyphicon icon="send"/>
 </p>
 
+<h1>Form Stuff</h1>
+<form role="form">
+<bf:text bean="${cmd }" label="Label" field="someText" />
+<g:eachError></g:eachError>
+</form>
 </body>
 
 </html>
