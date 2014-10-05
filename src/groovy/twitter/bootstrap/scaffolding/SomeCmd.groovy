@@ -4,4 +4,6 @@ package twitter.bootstrap.scaffolding
 class SomeCmd {
 
 	String someText = ""
+	
+	Boolean someCheck = true
 }

@@ -15,8 +15,6 @@
 
 <bootstrap:datePicker name="testme"/>
 
-<h1>Field</h1>
-<g:textField name="test"/>
 
 <h1>Glyphicons</h1>
 Tag lib test here:
@@ -27,8 +25,10 @@ Tag lib test here:
 
 <h1>Form Stuff</h1>
 <form role="form">
-<bf:text bean="${cmd }" label="Label" field="someText" />
-<g:eachError></g:eachError>
+<%--<bf:text bean="${cmd }" label="Label" field="someText" />
+--%>
+	<f:field property="someText" bean="${cmd }" label="Hello there" />
+	<f:field property="someCheck" bean="${cmd }"></f:field>
 </form>
 </body>
 
