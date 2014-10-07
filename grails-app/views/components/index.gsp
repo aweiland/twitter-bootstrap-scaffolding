@@ -25,10 +25,9 @@ Tag lib test here:
 
 <h1>Form Stuff</h1>
 <form role="form">
-<%--<bf:text bean="${cmd }" label="Label" field="someText" />
---%>
 	<f:field property="someText" bean="${cmd }" label="Hello there" />
-	<f:field property="someCheck" bean="${cmd }"></f:field>
+	<f:field property="someCheck" bean="${cmd }" />
+	<f:field property="someday" bean="${cmd }" />
 </form>
 </body>
 
