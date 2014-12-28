@@ -6,20 +6,19 @@
 // to create separate JavaScript files as needed.
 //
 //= require jquery
-//= require_tree .
-//= require_self
+//= require grails/module
 //= require bootstrap
-//= require bootstrap-datepicker
+//= require calendar
+//= require_self
 
-if (typeof jQuery !== 'undefined') {
-	(function($) {
-		$('.datepicker').datepicker();
-		
-		
-		$('#spinner').ajaxStart(function() {
-			$(this).fadeIn();
-		}).ajaxStop(function() {
-			$(this).fadeOut();
-		});
-	})(jQuery);
-}
+//if (typeof jQuery !== 'undefined') {
+//	(function($) {
+//		$('.datepicker').datepicker();
+//		
+//		$('#spinner').ajaxStart(function() {
+//			$(this).fadeIn();
+//		}).ajaxStop(function() {
+//			$(this).fadeOut();
+//		});
+//	})(jQuery);
+//}
