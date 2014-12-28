@@ -16,7 +16,7 @@
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 
-		<r:require modules="scaffolding"/>
+		<asset:stylesheet src="application.css"/>
 
 		<!-- Le fav and touch icons -->
 		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
@@ -24,45 +24,18 @@
 		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
 
 		<g:layoutHead/>
-		<r:layoutResources/>
 	</head>
 
 	<body>
-		<nav class="navbar navbar-fixed-top">
-			<div class="navbar-inner">
-				<div class="container-fluid">
-					
-					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</a>
-					
-					<a class="brand" href="${createLink(uri: '/')}">Grails Twitter Bootstrap</a>
+		<g:render template="/_common/nav/navbar" />
 
-					<div class="nav-collapse">
-						<ul class="nav">							
-							<li<%= request.forwardURI == "${createLink(uri: '/')}" ? ' class="active"' : '' %>><a href="${createLink(uri: '/')}">Home</a></li>
-							<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-								<li<%= c.logicalPropertyName == controllerName ? ' class="active"' : '' %>><g:link controller="${c.logicalPropertyName}">${c.naturalName}</g:link></li>
-							</g:each>
-						</ul>
-					</div>
-				</div>
+		<div class="container">
+			<g:render template="/_common/nav/crudbar" />
+			<div class="starter-template">
+				<g:layoutBody/>
 			</div>
-		</nav>
-
-		<div class="container-fluid">
-			<g:layoutBody/>
-
-			<hr>
-
-			<footer>
-				<p>&copy; Company 2013</p>
-			</footer>
 		</div>
 
-		<r:layoutResources/>
-
+		<asset:javascript src="application.js"/>
 	</body>
 </html>

@@ -1,5 +1,5 @@
-<div class="input-prepend">
-	<span class="add-on"><i class="icon-envelope"></i></span>
+<div class="input-group">
+	<div class="input-group-addon">@</div>
 <%
 	def attrs = [type: 'email', name: property, value: value]
 	if (required) attrs.required = ''
