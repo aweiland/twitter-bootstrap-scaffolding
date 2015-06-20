@@ -49,6 +49,9 @@ grails.project.dependency.resolution = {
 //		runtime ":cached-resources:1.0"
 //		runtime ":zipped-resources:1.0"
 
+        compile ":angular-template-asset-pipeline:1.4.0"
+        compile ":angular-annotate-asset-pipeline:1.1.2"
+
         build ":tomcat:7.0.47"
     }
 }
